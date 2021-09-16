@@ -233,7 +233,6 @@ int main () {
     dumpNames(thermalNames, "C");
     printf("\n"); fflush(stdout);
 
-    while (1) {
         CFArrayRef currentValues = getPowerValues(currentSensors);
         CFArrayRef voltageValues = getPowerValues(voltageSensors);
         CFArrayRef thermalValues = getThermalValues(thermalSensors);
@@ -248,7 +247,6 @@ int main () {
         CFRelease(currentValues);
         CFRelease(voltageValues);
         CFRelease(thermalValues);
-    }
 
 #if 0
     NSLog(@"%@\n", CFArrayGetValueAtIndex(currentNames, 0));
